@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import NavigationBar from 'react-native-navbar';
-import FeedList from './component/FeedList';
+// import FeedList from './component/FeedList';
 
 
 var MainPage = React.createClass({
@@ -52,7 +52,7 @@ var MainPage = React.createClass({
         </View>
         )
         }
-        <FeedList {...this.props}/>
+        {/*<FeedList {...this.props}/>*/}
       </View>
     );
   },

@@ -7,18 +7,15 @@ import {
     TouchableOpacity,
     Image,
     Dimensions,
-    ScrollView,
     ListView,
     Platform
 } from 'react-native';
 
-import PoplarEnv from '../util/PoplarEnv';
-import FollowBtn from './actions/Follow';
 import FeedCell from './FeedCell';
 import FeedDetail from './FeedDetail';
 import BlankTemplate from './BlankTemplate';
-import {Auth,ImgOps,Conf,Rs,Rpc} from 'react-native-qiniu';
-import {getFeedsOfUser, refresh, load} from '../api/FeedAPI';
+import {Auth,Rpc} from 'react-native-qiniu';
+import {getFeedsOfUser} from '../api/FeedAPI';
 import {getUserInfo} from '../util/Secret';
 import URLConf from '../api/URLConf';
 

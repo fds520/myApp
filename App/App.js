@@ -10,10 +10,10 @@ import {
 import TabNavigator from 'react-native-tab-navigator';
 import {isLogin, logout} from './util/Secret';
 import NewFeed from './NewFeed';
-// import MinePage from './MinePage';
-/*import ExplorePage from './ExplorePage';
 import MainPage from './MainPage';
-import AlarmPage from './AlarmPage';*/
+// import MinePage from './MinePage';
+import ExplorePage from './ExplorePage';
+import AlarmPage from './AlarmPage';
 import LoginRegPage from './LoginRegPage';
 
 var App = React.createClass({
@@ -50,6 +50,20 @@ var App = React.createClass({
   render: function() {
     return (
       <TabNavigator>
+          <TabNavigator.Item
+              selected={this.state.selectedTab === 'mainTab'}
+              renderIcon={() => <Image style={styles.icon} source={require('./imgs/home.png')} />}
+              renderSelectedIcon={() => <Image style={styles.icon} source={require('./imgs/home_selected.png')} />}
+              onPress={() => this.setState({ selectedTab: 'mainTab' })}>
+              {this.state.isLogin ? <MainPage token={this.state.token} sent={this.state.sent} id={this.state.id} {...this.props}/> : <LoginRegPage refresh={this.refresh}/>}
+          </TabNavigator.Item>
+          <TabNavigator.Item
+              selected={this.state.selectedTab === 'exploreTab'}
+              renderIcon={() => <Image style={styles.icon} source={require('./imgs/search.png')} />}
+              renderSelectedIcon={() => <Image style={styles.icon} source={require('./imgs/search_selected.png')} />}
+              onPress={() => this.setState({ selectedTab: 'exploreTab' })}>
+              <ExplorePage  refresh={this.refresh} {...this.props}/>
+          </TabNavigator.Item>
         <TabNavigator.Item
           selected={this.state.selectedTab === 'addTab'}
           renderIcon={() => <Image style={styles.icon} source={require('./imgs/add.png')} />}
@@ -62,6 +76,20 @@ var App = React.createClass({
           >
           {this.state.isLogin ? <View/> : <LoginRegPage refresh={this.refresh}/>}
         </TabNavigator.Item>
+          <TabNavigator.Item
+              selected={this.state.selectedTab === 'alarmTab'}
+              renderIcon={() => <Image style={styles.icon} source={require('./imgs/alarm.png')} />}
+              renderSelectedIcon={() => <Image style={styles.icon} source={require('./imgs/alarm_selected.png')} />}
+              onPress={() => this.setState({ selectedTab: 'alarmTab' })}>
+              {this.state.isLogin ? <AlarmPage {...this.props}/> : <LoginRegPage refresh={this.refresh}/>}
+          </TabNavigator.Item>
+          <TabNavigator.Item
+              selected={this.state.selectedTab === 'iTab'}
+              renderIcon={() => <Image style={styles.icon} source={require('./imgs/user.png')} />}
+              renderSelectedIcon={() => <Image style={styles.icon} source={require('./imgs/user_selected.png')} />}
+              onPress={() => this.setState({ selectedTab: 'iTab' })}>
+              {/*{this.state.isLogin ? <MinePage token={this.state.token} logout={this.logout} {...this.props}/> : <LoginRegPage refresh={this.refresh}/>}*/}
+          </TabNavigator.Item>
       </TabNavigator>
     );
   },
