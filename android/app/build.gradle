@@ -98,7 +98,7 @@ android {
     }
     signingConfigs{
                 release{
-                    storeFile file("F://space/studySpace/Poplar/SuperBigLw-key.keystore")
+                    storeFile file("F://space/studySpace/myApp/SuperBigLw-key.keystore")
                     storePassword "fds123"
                     keyAlias "SuperBigLw-key-alias"
                     keyPassword "fds123"
