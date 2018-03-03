@@ -5,7 +5,6 @@ import {
   Image,
   Text,
   TouchableOpacity,
-  TouchableHighlight
 } from 'react-native';
 
 import {getToken} from '../../util/Secret';

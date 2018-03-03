@@ -3,13 +3,10 @@
 import React from 'react';
 
 import {
-  ListView,
   StyleSheet,
   Text,
   Image,
   View,
-  ScrollView,
-  Modal,
   Dimensions,
   TouchableOpacity,
 } from 'react-native';

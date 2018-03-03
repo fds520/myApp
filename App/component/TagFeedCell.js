@@ -14,7 +14,6 @@ import {
 import URLConf from '../api/URLConf';
 import CommentList from './CommentList';
 import FeedActions from './actions/FeedActions';
-import TagDetail from './TagDetail';
 import {formatDate} from '../util/DateUtil';
 
 const windowWidth = Dimensions.get('window').width;

@@ -5,26 +5,21 @@ import {
   Image,
   Text,
   TextInput,
-  Keyboard,
   TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
   View,
   ScrollView,
   Modal,
-  Navigator,
   StyleSheet,
   Dimensions,
   NativeModules
 } from 'react-native';
 
 import {newFeed} from './api/FeedAPI';
-import {Auth,ImgOps,Conf,Rs,Rpc} from 'react-native-qiniu';
+import {Auth,Rpc} from 'react-native-qiniu';
 var ImagePicker = NativeModules.ImageCropPicker;
 import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 const margin = 20;
 const imgInterval = 5;
 const imgCountLimit = 9;

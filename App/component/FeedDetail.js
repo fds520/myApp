@@ -21,12 +21,10 @@ import CommentAction from './actions/Comment';
 import CommentBar from './CommentBar';
 import CommentList from './CommentList';
 import PhotoSwiper from './PhotoSwiper';
-import TagDetail from './TagDetail';
 import HomePage from './HomePage';
 import PoplarEnv from '../util/PoplarEnv';
 
 const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 const margin = 20;
 const imgInterval = 5;
 

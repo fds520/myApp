@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  Component,
-  Image,
   TouchableOpacity,
   View,
   Text,

@@ -5,9 +5,7 @@ import {
   ListView,
   StyleSheet,
   Text,
-  Image,
   View,
-  TouchableOpacity,
   Dimensions
 } from 'react-native';
 

@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import NavigationBar from 'react-native-navbar';
-// import FeedList from './component/FeedList';
+import FeedList from './component/FeedList';
 
 
 var MainPage = React.createClass({

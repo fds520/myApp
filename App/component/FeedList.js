@@ -10,10 +10,10 @@ import {
   RefreshControl,
 } from 'react-native';
 
-import FeedCell from './FeedCell';
-import FeedDetail from './FeedDetail';
-import TagDetail from './TagDetail';
-import HomePage from './HomePage';
+// import FeedCell from './FeedCell';
+// import FeedDetail from './FeedDetail';
+// import TagDetail from './TagDetail';
+// import HomePage from './HomePage';
 import BlankTemplate from './BlankTemplate';
 import {getMyFeeds, refresh, load} from '../api/FeedAPI';
 import {getToken} from '../util/Secret';

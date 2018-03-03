@@ -10,9 +10,9 @@ import {
 import TabNavigator from 'react-native-tab-navigator';
 import {isLogin, logout} from './util/Secret';
 import NewFeed from './NewFeed';
-import MainPage from './MainPage';
-// import MinePage from './MinePage';
 import ExplorePage from './ExplorePage';
+import MainPage from './MainPage';
+import MinePage from './MinePage';
 import AlarmPage from './AlarmPage';
 import LoginRegPage from './LoginRegPage';
 
@@ -29,6 +29,28 @@ var App = React.createClass({
       id: '',
     };
   },
+
+    componentWillMount: function() {
+        isLogin((result, token) => {
+            if(result) {
+                this.setState({
+                    isLogin: true,
+                    token: token,
+                });
+            }
+        });
+    },
+
+    logout: function() {
+        logout((result) => {
+            if(result) {
+                this.setState({
+                    token: '',
+                    isLogin: false,
+                });
+            }
+        });
+    },
 
   sendOk: function(result, id) {
     this.setState({
@@ -88,7 +110,7 @@ var App = React.createClass({
               renderIcon={() => <Image style={styles.icon} source={require('./imgs/user.png')} />}
               renderSelectedIcon={() => <Image style={styles.icon} source={require('./imgs/user_selected.png')} />}
               onPress={() => this.setState({ selectedTab: 'iTab' })}>
-              {/*{this.state.isLogin ? <MinePage token={this.state.token} logout={this.logout} {...this.props}/> : <LoginRegPage refresh={this.refresh}/>}*/}
+              {this.state.isLogin ? <MinePage token={this.state.token} logout={this.logout} {...this.props}/> : <LoginRegPage refresh={this.refresh}/>}
           </TabNavigator.Item>
       </TabNavigator>
     );

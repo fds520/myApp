@@ -7,14 +7,11 @@ import {
     View,
     Image,
     Dimensions,
-    ScrollView,
     ListView,
     TouchableOpacity
 } from 'react-native';
 
 import FollowBtn from './actions/Follow';
-import FeedDetail from './FeedDetail';
-import TagDetail from './TagDetail';
 import FeedCell from './FeedCell';
 import {getFeedsOfUser} from '../api/FeedAPI';
 import URLConf from '../api/URLConf';
