@@ -52,7 +52,7 @@ var MainPage = React.createClass({
         </View>
         )
         }
-        {/*<FeedList {...this.props}/>*/}
+        <FeedList {...this.props}/>
       </View>
     );
   },

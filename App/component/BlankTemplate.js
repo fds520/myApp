@@ -1,12 +1,9 @@
 import React from 'react';
 import {
-  ListView,
   StyleSheet,
   Text,
-  Image,
   View,
   Dimensions,
-  TextInput,
 } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;

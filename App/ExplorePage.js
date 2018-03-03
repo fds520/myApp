@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import NavigationBar from 'react-native-navbar';
-// import ExploreContainer from './component/ExploreContainer';
+import ExploreContainer from './component/ExploreContainer';
 
 var ExplorePage = React.createClass({
   getInitialState: function(){
@@ -34,7 +34,7 @@ var ExplorePage = React.createClass({
         <NavigationBar
         style={{borderBottomWidth: 0.5, borderBottomColor: '#F3F3F3'}}
         title={{title: '探索'}}/>
-        {/*<ExploreContainer token={this.props.token} {...this.props}/>*/}
+        <ExploreContainer token={this.props.token} {...this.props}/>
       </View>
     );
   },

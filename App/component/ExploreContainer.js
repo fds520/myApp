@@ -6,9 +6,9 @@ import {
   ScrollView,
 } from 'react-native';
 
-import TopGallery from './TopGallery';
-import TagsSection from './TagsSection';
-import UsersSection from './UsersSection';
+// import TopGallery from './TopGallery';
+// import TagsSection from './TagsSection';
+// import UsersSection from './UsersSection';
 import TagDetail from './TagDetail';
 
 var ExploreContainer = React.createClass({
@@ -23,12 +23,12 @@ var ExploreContainer = React.createClass({
   render: function(){
     return (
       <ScrollView style={styles.container}>
-          <TopGallery navigator={this.props.navigator}/>
+          /*<TopGallery navigator={this.props.navigator}/>
           <TagsSection token={this.props.token}
                        navigator={this.props.navigator}
                        nav2TagDetail={this.nav2TagDetail}
                        refresh={this.props.refresh}/>
-          <UsersSection navigator={this.props.navigator} refresh={this.props.refresh}/>
+          <UsersSection navigator={this.props.navigator} refresh={this.props.refresh}/>*/
       </ScrollView>
     );
   },

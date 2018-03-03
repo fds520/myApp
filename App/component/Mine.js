@@ -11,8 +11,8 @@ import {
     Platform
 } from 'react-native';
 
-import FeedCell from './FeedCell';
-import FeedDetail from './FeedDetail';
+// import FeedCell from './FeedCell';
+// import FeedDetail from './FeedDetail';
 import BlankTemplate from './BlankTemplate';
 import {Auth,Rpc} from 'react-native-qiniu';
 import {getFeedsOfUser} from '../api/FeedAPI';
@@ -168,8 +168,6 @@ var Mine = React.createClass({
         this.setState({
           avatarSource: source
         }, () => this.upload());
-
-
       }
     });
   },
@@ -177,11 +175,11 @@ var Mine = React.createClass({
   selectFeed: function(feed, avatarCanClick=false) {
     //this.props.hideTabBar();
     let navigator = this.props.navigator;
-    this.props.navigator.push({
+    /*this.props.navigator.push({
       title: '正文',
       component: FeedDetail,
       params: {token:this.props.token, navigator, feed, nav2TagDetail:this.nav2TagDetail, avatarCanClick:avatarCanClick}
-    });
+    });*/
   },
 
   pressAvatar: function(feed) {
@@ -212,7 +210,7 @@ var Mine = React.createClass({
 
   renderFeed: function(feed) {
     return(
-      <FeedCell
+     {/* <FeedCell
         navigator={this.props.navigator}
         onSelect={() => this.selectFeed(feed)}
         feed={feed}
@@ -221,7 +219,7 @@ var Mine = React.createClass({
         pressAvatar={() =>this.pressAvatar(feed)}
         push2FeedDetail={() => this.selectFeed(feed)}
         nav2TagDetail={this.nav2TagDetail}
-      />
+      />*/}
     );
   },
 
@@ -240,7 +238,7 @@ var Mine = React.createClass({
               <Image resizeMode='cover' style={styles.background} source={require('../imgs/tag1.jpg')} />
               {this.renderAvatar()}
             </View>
-            <View style={styles.metas}>
+            <View>
               <View style={styles.desc}>
                 <Text style={styles.name}>{this.state.userName}</Text>
                 <Text style={styles.motto}>Time to do it</Text>

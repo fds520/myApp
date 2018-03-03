@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 
 import URLConf from '../api/URLConf';
-import TagFollow from './actions/TagFollow';
-import TagFeedList from './TagFeeds';
+// import TagFollow from './actions/TagFollow';
+// import TagFeedList from './TagFeeds';
 import ParallaxScrollView from 'react-native-parallax-scroll-view';
 
 const IMAGE_BASE_URL = URLConf.IMG_BASE_URL;
@@ -83,11 +83,11 @@ var TagDetail = React.createClass({
                 <Image style={{width: 18, height: 18}} source={require('../imgs/back.png')} />
               </TouchableOpacity>
             </View>
-            <TagFollow token={this.props.token} refresh={this.props.refresh} tagId={this.props.tag.id}/>
+            /*<TagFollow token={this.props.token} refresh={this.props.refresh} tagId={this.props.tag.id}/>*/
           </View>
           )}>
 
-          <TagFeedList tagId={this.props.tag.id} token={this.props.token} navigator={this.props.navigator} nav2TagDetail={this.nav2TagDetail} refresh={this.props.refresh}/>
+          /*<TagFeedList tagId={this.props.tag.id} token={this.props.token} navigator={this.props.navigator} nav2TagDetail={this.nav2TagDetail} refresh={this.props.refresh}/>*/
 
           {/* <ScrollableTabView
                 style={{marginTop: 10, }}

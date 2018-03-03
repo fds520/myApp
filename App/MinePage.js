@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 
-// import Mine from './component/Mine';
+import Mine from './component/Mine';
 import SettingsBtn from './component/navbar/SettingsBtn';
 import SettingsPage from './SettingsPage';
 import NavigationBar from 'react-native-navbar';
