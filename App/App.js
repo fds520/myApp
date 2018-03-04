@@ -22,7 +22,7 @@ var App = React.createClass({
     return {
       selectedTab:'mainTab',
       notifCount: 0,
-      isLogin: true,
+      isLogin: false,
       token: '',
       isLogout: false,
       sent: false,

@@ -69,7 +69,6 @@ var LoginRegPage = React.createClass({
               </TouchableOpacity>
             </View>
           </View>
-
         </View>
 
       );

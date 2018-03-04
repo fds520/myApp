@@ -18,7 +18,6 @@ import PoplarEnv from './util/PoplarEnv';
 import URLConf from './api/URLConf';
 
 const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 const margin = 20;
 
 const LOGIN_URL = URLConf.API_HOST + '/account/login';
@@ -110,7 +109,6 @@ var LoginPage = React.createClass({
       ? {backgroundColor: '#fff', padding: 20}
       : null;
     return (
-      //<View style={styles.container}>
         <Modal
           animationType={"slide"}
           transparent={this.state.transparent}
