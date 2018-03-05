@@ -2,17 +2,15 @@
 
 import React from 'react';
 import {
-  Image,
   StyleSheet,
   Text,
   Dimensions,
   TouchableOpacity,
-  View,
-  ScrollView
+  View
 } from 'react-native';
 
-import Swiper from 'react-native-swiper';
-import PhotoView from 'react-native-photo-view';
+// import Swiper from 'react-native-swiper';
+// import PhotoView from 'react-native-photo-view';
 import URLConf from '../api/URLConf';
 
 const { width, height } = Dimensions.get('window');

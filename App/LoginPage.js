@@ -31,8 +31,8 @@ var LoginPage = React.createClass({
 
   getInitialState() {
     return {
-      email: 'osfdemo1@163.com',
-      password: 'demo123456',
+      email: 'fds@qq.com',
+      password: 'fdsfdsfds',
       animated: true,
       transparent: false,
       inTheLog: false,
@@ -138,7 +138,7 @@ var LoginPage = React.createClass({
                             placeholder="邮箱"
                             editable={this.state.inTheLog ? false: true}
                             onChangeText={(email) => this.setState({email})}
-                            defaultValue='osfdemo1@163.com'
+                            defaultValue='fds@qq.com'
                           />
                   <TextInput
                             style={{height: 40,
@@ -153,7 +153,7 @@ var LoginPage = React.createClass({
                             secureTextEntry={true}
                             editable={this.state.inTheLog ? false: true}
                             onChangeText={(password) => this.setState({password})}
-                            defaultValue='demo123456'
+                            defaultValue='fdsfdsfds'
                           />
                   <View>
                     {
