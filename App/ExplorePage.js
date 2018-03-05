@@ -2,16 +2,9 @@
 
 import React from 'react';
 import {
-    ListView,
     StyleSheet,
     Text,
-    Image,
     View,
-    ScrollView,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    Navigator,
 } from 'react-native';
 
 import NavigationBar from 'react-native-navbar';

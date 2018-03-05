@@ -71,9 +71,10 @@ var NewFeed = React.createClass({
   upload: function() {
 
     //set your key
-    //Conf.ACCESS_KEY = <AK>;
-    //Conf.SECRET_KEY = <SK>;
+    // Conf.ACCESS_KEY = <AK>;
+    // Conf.SECRET_KEY = <SK>;
 
+    alert('上传图片')
     var putPolicy = new Auth.PutPolicy2(
         {scope: "osfimgs2"}
     );
@@ -87,8 +88,10 @@ var NewFeed = React.createClass({
         formData.append('token', uptoken);
 
         this.props.sendOk(false, 0);
+          alert('上传图片2' + uptoken)
         Rpc.uploadFile(img.uri, uptoken, formData).then((response) => response.json()).then((responseData) => {
          console.log(responseData);
+            alert(responseData)
          this.state.imagesID.push({key:responseData.hash });
          if(this.state.imagesID.length == this.state.images.length) {
            newFeed(this.state.text, this.state.imagesID, this.state.tags, (result, id) => {
@@ -188,14 +191,7 @@ var NewFeed = React.createClass({
   },
 
   render: function() {
-    var modalBackgroundStyle = {
-      backgroundColor: this.state.transparent ? 'rgba(0, 0, 0, 0.5)' : '#f5fcff',
-    };
-    var innerContainerTransparentStyle = this.state.transparent
-      ? {backgroundColor: '#fff', padding: 20}
-      : null;
     return (
-      //<View style={styles.container}>
         <Modal
           animationType={"slide"}
           transparent={this.state.transparent}
@@ -235,7 +231,6 @@ var NewFeed = React.createClass({
               </View>
               <View style={styles.tagsContainer}>
                 <View style={{flex:1, flexDirection: 'row'}}>
-                  {/* <Image style={styles.tagIcon} source={require('./imgs/tag.png')} /> */}
                   <Text style={styles.tagIcon}>#</Text>
                   <TextInput
                     style={styles.tagInput}
@@ -255,10 +250,7 @@ var NewFeed = React.createClass({
               </View>
               <KeyboardSpacer/>
             </ScrollView>
-
         </Modal>
-
-      //</View>
     );
   },
 });
@@ -266,11 +258,7 @@ var NewFeed = React.createClass({
 
 var styles = StyleSheet.create({
   container: {
-    //justifyContent: 'center',
-    //marginTop: 70,
-    //padding: 20,
     flex : 1,
-    // backgroundColor: '#ffffff',
   },
   innerContainer: {
     borderRadius: 10,
@@ -300,17 +288,12 @@ var styles = StyleSheet.create({
     borderBottomColor: '#9B9B9B',
   },
   input: {
-    //flex:1,
-    //position: 'relative',
-    //flexDirection:'column',
   },
   footer: {
     height: 30,
     backgroundColor:'#ff99ff',
   },
   multiline: {
-    // borderWidth: 1,
-    // borderColor: 'black',
     flex: 1,
     fontSize: 18,
     height: 150,
@@ -333,11 +316,8 @@ var styles = StyleSheet.create({
   tagInput: {
     flex:1,
     height: 30,
-    // borderWidth: 1,
-    // borderColor: 'black',
     width: windowWidth-margin*4,
     marginRight: 20,
-    //marginLeft: margin,
   },
   tags: {
     flex: 1,
@@ -347,8 +327,6 @@ var styles = StyleSheet.create({
     height: 100,
     margin: margin,
     marginTop: 30,
-    // borderWidth: 1,
-    // borderColor: 'black',
   },
   tag: {
     height: 26,
@@ -358,12 +336,9 @@ var styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     backgroundColor: '#F3F3F3',
-    // borderColor: '#adadad',
-    // borderWidth: 0.5,
     borderRadius: 5,
   },
   imgContainer: {
-    //height: windowHeight - 70 - 150 - 30,
     flexDirection: 'row',
     flexWrap: 'wrap',
     paddingTop: 0,
@@ -393,7 +368,4 @@ var styles = StyleSheet.create({
   }
 
 });
-
-
-
 module.exports = NewFeed;
